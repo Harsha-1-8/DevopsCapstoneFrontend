@@ -1,0 +1,58 @@
+<div class="container">
+  <!-- Header Section -->
+  <header class="header">
+    <h1 class="title">Stock Vault</h1>
+    <div class="nav">
+      <span class="nav-item">Notifications</span>
+      <span class="nav-item">Profile</span>
+      <img src="https://static.vecteezy.com/system/resources/previews/005/544/718/original/profile-icon-design-free-vector.jpg" alt="Profile Icon" class="profile-icon" />
+
+    </div>
+  </header>
+
+  <!-- Content Section -->
+  <main class="content">
+    <div class="icon-section">
+      <i class="item-icon">📄</i>
+      <h2 class="subtitle">Bill Of Materials</h2>
+    </div>
+
+    <p class="new-table">New table</p>
+
+    <!-- Table Section -->
+    <table class="bom-table">
+      <thead>
+        <tr>
+          <th>S no</th>
+          <th>Unique Item Code</th>
+          <th>Description</th>
+          <th>Quantity</th>
+          <th>Dimensions</th>
+          <th>Units of Measure</th>
+          <th>Manufacturer</th>
+          <th>Supplier Code</th>
+          <th>Sub Assembly</th>
+          <th>Notes and Comments</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of bomDetails; index as i">
+          <td>{{ i + 1 }}</td>
+          <td>{{ item.uniqueItemCode }}</td>
+          <td>{{ item.description }}</td>
+          <td>{{ item.quantity }}</td>
+          <td>{{ item.dimensions}}</td>
+          <td>{{ item.unitsofmeasure }}</td>
+          <td>{{ item.manufacturer }}</td>
+          <td>{{ item.suppliercode }}</td>
+          <td>{{ item.subassembly }}</td>
+          <td>{{ item.notesandcomments }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Submit Button -->
+    <button type="button" class="submit-button" (click)="submitBOM()">Submit</button>
+
+  </main>
+</div>

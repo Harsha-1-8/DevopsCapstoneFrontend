@@ -1,0 +1,182 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #eef2e6;
+}
+
+/* Main Container */
+.inventory-requisition-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f7fbe8;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.inventory-header {
+  text-align: left;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.inventory-header h1 {
+  color: #6a329f;
+  font-style: italic;
+  font-size: 2rem;
+}
+
+.inventory-header h2 {
+  font-size: 1.5rem;
+  color: black;
+  font-style: italic;
+}
+
+.inventory-header p {
+  font-size: 1.5rem;
+  color: darkblue;
+  font-style: italic;
+}
+
+/* Form Layout */
+.inventory-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 2rem;
+}
+
+/* Form Row */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+/* Form Group */
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+}
+
+.form-group label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #6a329f;
+  box-shadow: 0 0 4px rgba(106, 50, 159, 0.5);
+  /* Light purple focus effect */
+}
+
+/* Footer */
+.form-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.save-button {
+  background-color: #004aad;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-button:hover {
+  background-color: #003380;
+
+}
+
+img {
+  max-width: 50px;  
+  height: auto;     
+  margin-right: 20px;
+}
+
+.flex-container {
+  display: flex;        
+  align-items: center; 
+}
+
+#stock{
+  margin-right: 40%;
+}
+
+#notify{
+  margin-right: 15%;
+}
+
+#inventory{
+ margin-right: 35%;
+ font-style: italic;
+}
+
+#add-items-btn {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px; 
+  font-size: 16px;
+  cursor: pointer;
+  border: solid;
+  color: rgb(54, 54, 200);
+  border-radius: 5px;
+  background-color: white;
+}
+
+#add-items-btn .logo {
+  width: 20px; 
+  height: auto; 
+  margin-right: 10px; 
+}
+
+.save-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.submit-button {
+  background-color: darkblue;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.success-message {
+  color: purple;
+  border: 2px solid purple;
+  padding: 10px;
+  text-align: center; /* Center-align the text */
+  width: fit-content; /* Adjust the width to fit the content */
+  margin: 20px auto; /* Center the element horizontally and add vertical margin */
+  font-weight: bold; /* Make the text bold */
+  border-radius: 8px; /* Add rounded corners */
+}

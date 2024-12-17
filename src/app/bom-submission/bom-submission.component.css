@@ -1,0 +1,119 @@
+/* General container styling */
+.container {
+  font-family: Arial, sans-serif;
+  background-color: #eef0d8; /* Matches the light green background */
+  padding: 20px;
+  height: 100vh;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 28px;
+  color: #6a1b9a; /* Purple color for Stock Vault */
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-item {
+  font-size: 16px;
+  color: #000; /* Black text for notifications and profile */
+}
+
+.icon-profile {
+  font-size: 20px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 5px;
+  color: #333; /* Dark gray for the icon */
+}
+
+/* Content */
+.content {
+  text-align: left;
+}
+.profile-icon {
+  width: 20px;
+  height: 20px;
+}
+
+
+.icon-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.item-icon {
+  font-size: 28px;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 22px;
+  color: #000; /* Black */
+  font-weight: bold;
+}
+
+.new-table {
+  font-size: 16px;
+  color: #1a237e; /* Dark blue */
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+/* Table */
+.bom-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.bom-table th,
+.bom-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.bom-table th {
+  background-color: #f4f4f4;
+  color: #1a237e; /* Dark blue for header text */
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.bom-table td input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Submit Button */
+.submit-button {
+  padding: 10px 20px;
+  background-color: #303f9f; /* Blue color */
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #1e2c6e;
+}

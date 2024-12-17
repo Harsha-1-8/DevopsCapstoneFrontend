@@ -1,0 +1,121 @@
+<div class="container">
+  <!-- Header Section -->
+  <div class="header">
+    <h1>Stock Vault</h1>
+    <div class="header-right">
+      <span class="header-text">Notifications</span>
+      <span class="header-text">Profile</span>
+      <img src="https://static.vecteezy.com/system/resources/previews/005/544/718/original/profile-icon-design-free-vector.jpg" alt="Profile Icon" class="profile-icon" />
+    </div>
+  </div>
+
+  <!-- Title and Add More Items Button -->
+  <div class="title-section">
+    <div class="icon-section">
+      <img src="https://th.bing.com/th/id/OIP.xmZ-8S6WPbBNLoOWIqVvZAAAAA?rs=1&pid=ImgDetMain" alt="Profile Icon" class="profile-icon" />
+
+      <h2>Create BOM</h2>
+    </div>
+    <button type="button" class="add-item-btn">+ Add more items to BOM</button>
+  </div>
+  
+  <p>Enter the following details to generate the BOM</p>
+
+  <!-- Form Section -->
+  <form class="form" #bomForm="ngForm" (ngSubmit)="onSubmit(bomForm)">
+    <div class="form-row">
+      <div class="form-group">
+        
+        <label for="unique-item-code">Unique Item Code</label>
+        <input type="text" id="unique-item-code" placeholder="Enter code" [(ngModel)]="generatebom.uniqueItemCode" name="uniqueItemCode"/>
+      </div>
+      <div class="form-group">
+        <label for="units">Units of Measure</label>
+        <select id="units" [(ngModel)]="generatebom.unitsofmeasure" name="unitsofmeasure">
+          <option value="mm">mm</option>
+          <option value="cm">cm</option>
+          <option value="in">in</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" id="description" placeholder="Enter description" [(ngModel)]="generatebom.description" name="description" />
+      </div>
+      <div class="form-group">
+        <label for="manufacturer">Manufacturer</label>
+        <input type="text" id="manufacturer" placeholder="Enter manufacturer" [(ngModel)]="generatebom.manufacturer" name="manufacturer" />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="quantity">Quantity<span class="red-star">*</span></label>
+        <input type="number" id="quantity" placeholder="Enter quantity" required ngModel name="quantity" #quantity="ngModel" pattern="^[0-9]+$"  [(ngModel)]="generatebom.quantity" />
+        <div *ngIf="quantity.invalid && (quantity.dirty || quantity.touched)">
+          <small *ngIf="quantity.errors?.['required']">Quantity is required.</small>
+          <small *ngIf="quantity.errors?.['pattern']">Quantity must be a number.</small>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="supplier-code">Supplier Code<span class="red-star">*</span></label>
+        <select id="supplier-code" required ngModel name="supplierCode" #supplierCode="ngModel" [(ngModel)]="generatebom.suppliercode">
+          <option value="12897">12897</option>
+          <option value="23589">23589</option>
+        </select>
+        <div *ngIf="supplierCode.invalid && (supplierCode.dirty || supplierCode.touched)">
+          <small *ngIf="supplierCode.errors?.['required']">Supplier Code is required.</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="dimensions">Dimensions</label>
+        <input type="text" id="dimensions" placeholder="Enter dimensions"  [(ngModel)]="dimensions" name="dimensions"/>
+      </div>
+      <div class="form-group">
+        <label for="sub-assembly">Sub Assembly<span class="red-star">*</span></label>
+        <input type="text" id="sub-assembly" placeholder="Enter sub assembly" required ngModel name="subAssembly" #subAssembly="ngModel" pattern="^[0-9]+$" [(ngModel)]="generatebom.subassembly"/>
+        <div *ngIf="subAssembly.invalid && (subAssembly.dirty || subAssembly.touched)">
+          <small *ngIf="subAssembly.errors?.['required']">Sub Assembly is required.</small>
+          <small *ngIf="subAssembly.errors?.['pattern']">Sub Assembly must be a number.</small>
+        </div>
+      </div>
+    </div>
+
+
+     <!-- Notes and Generate BOM Section -->
+     <div class="notes-and-generate">
+      <!-- Notes/Comments Field -->
+      <div class="form-group">
+        <label for="comments">Notes/Comments</label>
+        <input type="text" id="comments" placeholder="Add notes or comments" ngModel name="comments" [(ngModel)]="generatebom.notesandcomments"/>
+      </div>
+
+      <br>
+      <br>
+
+      <div class="generate-bom-container">
+        <!-- Generate BOM Button -->
+
+        <button type="button" class="generate-btn" (click)="submitBOM()">
+          save
+         
+       </button>
+       <button class="generate-btn" [routerLink]="'/bom-submission'">Generate Bom</button>
+      
+        <!-- Success message, shown only after clicking the button -->
+        <div *ngIf="isSubmitted" class="success-notification">
+          <p>Item code added to BOM successfully.</p>
+        </div>
+      </div>
+      </div>
+      </form>
+ 
+</div>
+
+
+    

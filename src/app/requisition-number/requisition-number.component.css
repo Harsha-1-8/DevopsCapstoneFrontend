@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #eef2e6;
+  }
+  
+  /* Main Container */
+  .inventory-requisition-container {
+    max-width: 10000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f7fbe8;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header */
+  .inventory-header {
+    text-align: left;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .inventory-header h1 {
+    color: #6a329f;
+    font-style: italic;
+    font-size: 2rem;
+    margin-right: auto;
+  }
+  
+  .inventory-header h2 {
+    font-size: 1.5rem;
+    color: black;
+    font-style: italic;
+    margin-right: 15%;
+  }
+  
+  .flex-container {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 5px; /* Add small spacing between elements */
+  }
+
+  .profile-text {
+    margin-right: 5px; /* Space between "Profile" and the image */
+    font-size: 1rem; /* Adjust font size if needed */
+  }
+  
+  
+  .inventory-header img {
+    max-width: 40px; /* Smaller image width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 0; /* Remove extra right margin */
+  }
+  
+  
+  .flex-container img {
+    max-width: 50px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  #inventory {
+    font-style: italic;
+    margin-right: auto;
+  }
+  
+  .message-container {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px; /* Rounded corners */
+    text-align: center;
+    font-size: 16px;
+    color: #333; /* Text color */
+  }
+  
+  .success-message {
+    background-color: white; /* Light blue background */
+    border: 2px solid #66b3ff; /* Blue border */
+    border-radius: 3px; /* Rounded corners */
+    padding: 10px;
+    color: #005cbf; /* Darker blue text color */
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .inventory-number {
+    background-color: white;
+    border: 2px solid #ff3385; /* Darker hot pink border */
+    border-radius: 2px; /* Rounded corners */
+    padding: 20px;
+    color: #ff3385;
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  

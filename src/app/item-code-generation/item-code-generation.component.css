@@ -1,0 +1,165 @@
+/* General container styling */
+.container {
+  font-family: Arial, sans-serif;
+  background-color: #eef0d8; /* Matches the light green background */
+  padding: 20px;
+  height: 100vh;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 28px;
+  color: #6a1b9a; /* Purple color for Stock Vault */
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-item {
+  font-size: 16px;
+  color: #000; /* Black text for notifications and profile */
+}
+
+.icon-profile {
+  font-size: 20px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 5px;
+  color: #333; /* Dark gray for the icon */
+}
+
+/* Content */
+.content {
+  text-align: left;
+}
+
+.icon-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.item-icon {
+  font-size: 28px;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 22px;
+  color: #000; /* Black */
+  font-weight: bold;
+}
+.profile-icon {
+  width: 20px;
+  height: 20px;
+}
+
+
+.instruction {
+  font-size: 22px;
+  color: #1a237e; /* Dark blue */
+  font-style: italic;
+  margin-bottom: 30px;
+
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1; /* Ensures equal spacing */
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  flex-basis: 150px; /* Fixed width for labels */
+}
+
+input, select {
+  flex: 1; /* Makes the input fill the remaining space */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Save Button */
+.save-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #303f9f; /* Blue color */
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: center;
+}
+
+.save-button:hover {
+  background-color: #1e2c6e;
+}
+
+
+.error-message {
+  color: red;
+  font-size: 15px;
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 1%;
+}
+
+
+.save-button:disabled {
+  background-color: #ccc;
+}
+
+form small{
+  color: red;
+}
+
+.success-notification {
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px 10px; /* Adjust padding for a compact size */
+  background-color: #f9fff9; /* Light background, almost white */
+  color: #36c7c9; /* Teal text color */
+  border: 1px solid #36c7c9; /* Thin teal border */
+  border-radius: 5px; /* Slightly rounded corners */
+  font-size: 17px; /* Font size for better readability */
+  font-weight: normal; /* Normal weight for the text */
+  width: fit-content; /* Auto width based on text content */
+  margin-left: auto; /* Center align */
+  margin-right: auto; /* Center align */
+}
+
+.red-star{
+  color:red;
+}

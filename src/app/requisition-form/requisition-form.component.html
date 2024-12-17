@@ -1,0 +1,119 @@
+<div class="inventory-requisition-container">
+  <header class="inventory-header">
+    <div class="flex-container">
+      <h1 id="stock">Stock Vault</h1>
+      <h2 id="notify">Notifications</h2>
+      <h2>Profile</h2>
+      <img
+        src="https://static.vecteezy.com/system/resources/previews/005/544/718/original/profile-icon-design-free-vector.jpg" />
+    </div>
+
+    <div class="flex-container">
+      <img
+        src="https://th.bing.com/th?id=OIP.CwYBb1GRbbB2bHMufzOZYAHaH0&w=243&h=256&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
+        alt="Sample Image from Bing" />
+      <h2 id="inventory">Inventory Requisition</h2>
+      <button id="add-items-btn" (click)="resetForm(requisitionForm)">
+        <img src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3217168/plus-circle-icon-sm.png" alt="Logo"
+          class="logo" />
+        Add more items to IR
+      </button>
+    </div>
+    <p>Enter the following details to raise Inventory Requisition</p>
+  </header>
+  <form class="inventory-form" #requisitionForm="ngForm" (ngSubmit)="onSave(requisitionForm)">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="reqDept">Requisitioner Department</label>
+        <input id="reqDept" type="text" name="requisitionerdepartment" [(ngModel)]="inventoryrequisition.requisitionerdepartment"
+          #requisitionerdepartment="ngModel" placeholder="Add text"/>
+      </div>
+
+      <div class="form-group">
+        <label for="dateRequisition">Date of Requisition</label>
+        <input id="dateRequisition" type="date" name="dateRequisition"
+          [(ngModel)]="inventoryrequisition.dateofrequistions" ngModel required [min]="minDate" />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="uniqueItemCode">Unique Item Code</label>
+        <input id="uniqueItemCode" type="text" name="uniqueItemCode" [(ngModel)]="uniqueItemCode"
+          #uniqueItemCode="ngModel" placeholder="Add text" [(ngModel)]="inventoryrequisition.uniqueItemCode"
+          pattern="[A-Za-z0-9]{10}" maxlength="10" required class="form-control" />
+        <div class="whatever" *ngIf="uniqueItemCode.touched && uniqueItemCode.errors">
+          <p *ngIf="uniqueItemCode.errors?.['required']">This field is required.</p>
+          <p *ngIf="uniqueItemCode.errors?.['pattern']">
+            Only alphanumeric characters (A-Z, 0-9) are allowed, with no symbols.
+          </p>
+          <p *ngIf="uniqueItemCode.errors?.['maxlength']">
+            The code must be exactly 10 characters long.
+          </p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="itemDescription">Item Description</label>
+        <input id="itemDescription" type="text" name="itemDescription" placeholder="Add text"
+          [(ngModel)]="inventoryrequisition.itemdescription" ngModel required />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="quantity">Quantity</label>
+        <input id="quantity" type="number" placeholder="Add text" name="quantity" ngModel
+          [(ngModel)]="inventoryrequisition.quantity" required />
+      </div>
+
+      <div class="form-group">
+        <label for="unitMeasure">Unit of Measure</label>
+        <select id="unitMeasure" type="text" name="unitMeasure" [(ngModel)]="inventoryrequisition.unitsofmeasure"
+          ngModel required>
+          <option value="" disabled selected>Select a unit Measure</option>
+          <option value="mm">Millimeters (mm)</option>
+          <option value="cm">Centimeters (cm)</option>
+          <option value="inches">Inches</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="purpose">Purpose of Requisitions</label>
+        <input id="purpose" type="text" name="purpose" placeholder="Add text"
+          [(ngModel)]="inventoryrequisition.purposeofrequistions" ngModel required />
+      </div>
+
+      <div class="form-group">
+        <label for="deliveryDept">Delivery Department</label>
+        <input id="deliveryDept" type="text" name="deliveryDept" placeholder="Add text"
+          [(ngModel)]="inventoryrequisition.deliverydepartment" ngModel required />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="materialDate">Material Required Date</label>
+        <input id="materialDate" type="date" name="materialDate" [(ngModel)]="inventoryrequisition.materialrequireddate"
+          ngModel required />
+      </div>
+
+      <div class="form-group">
+        <label for="notes">Notes & Comments</label>
+        <input id="notes" type="text" name="notes" placeholder="Add text"
+          [(ngModel)]="inventoryrequisition.notesandcomments" ngModel required />
+      </div>
+    </div>
+
+    <div class="form-footer">
+      <button type="button" class="save-button" id="saveBtn" (click)="handleSave()">SAVE</button>
+      <button type="submit" class="submit-button" id="submitBtn"
+        [style.display]="isSubmitVisible ? 'inline-block' : 'none'">Submit</button>
+    </div>
+  </form>
+  <p *ngIf="isMessageVisible" id="successMessage" class="success-message">
+    Item code successfully added to IR
+  </p>
+</div>

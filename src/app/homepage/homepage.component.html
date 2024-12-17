@@ -1,0 +1,99 @@
+<div class="stock-vault">
+  <header>
+    <h1 class="stock-vault-title">Stock Vault</h1>
+    <div class="header-icons">
+      <div class="notification-profile-container">
+        <button class="notification-btn" (click)="toggleNotifications()">
+          <img src="https://cdn-icons-png.flaticon.com/512/1592/1592461.png" />
+          <i class="fa fa-bell"></i> Notifications
+        </button>
+        <button class="profile-btn">
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/005/544/718/original/profile-icon-design-free-vector.jpg" />
+          <i class="fa fa-user"></i> Profile
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Notification Dropdown -->
+   <div *ngIf="showNotifications" class="notification-dropdown">
+    <ul class="notification-list">
+      <li *ngFor="let notification of notifications; let i = index">
+        <span *ngIf="i === 0; else otherNotifications">
+          <!-- Notification link for IR number -->
+          <a (click)="navigateToDetailsPage()" class="notification-link">
+            {{ notification }}
+          </a>
+        </span>
+        <ng-template #otherNotifications>
+          <!-- Display other notifications -->
+          {{ notification }}
+        </ng-template>
+      </li>
+    </ul>
+  </div>
+
+  <div class="buttons-container">
+    <div class="button-item">
+      <button routerLink="/item-code-generation" class="action-btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/182/182942.png" />
+        <p>Item Code</p>
+      </button>
+    </div>
+
+    <div class="button-item">
+      <button routerLink="/requisition-form" class="action-btn">
+        <img src="https://cdn-icons-png.flaticon.com/512/10351/10351575.png" alt="Warehouse Icon" />
+        <p>Inventory Requisition</p>
+      </button>
+    </div>
+
+    <div class="button-item">
+      <button routerLink="/bom" class="action-btn">
+        <img
+          src="https://thumbs.dreamstime.com/b/clipboard-document-outline-flat-icon-clipboard-outline-flat-icon-blank-document-isolated-white-background-eps-file-123523373.jpg"
+          alt="Warehouse Icon" />
+        <p>BOM</p>
+      </button>
+    </div>
+
+    <div class="button-item">
+      <button routerLink="/homepage" class="action-btn">
+        <img src="https://th.bing.com/th/id/OIP.nl4M7vpupEmOz-tGKJXumQHaHa?w=768&h=768&rs=1&pid=ImgDetMain"
+          alt="Warehouse Icon" />
+        <p> Purchase Requisition</p>
+      </button>
+    </div>
+
+    <div class="button-item">
+      <button routerLink="/homepage" class="action-btn">
+        <img src="https://clipartix.com/wp-content/uploads/2018/03/checklist-clipart-2018-53.png"
+          alt="Warehouse Icon" />
+        <p> Purchase Order</p>
+      </button>
+    </div>
+
+    <div class="button-item">
+      <button routerLink="/homepage" class="action-btn">
+        <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/boxes-1678042-1424489.png"
+          alt="Warehouse Icon" />
+        <p>Stock Watch</p>
+      </button>
+    </div>
+    <div class="button-item">
+      <button routerLink="/homepage" class="action-btn">
+        <img src="https://www.incharge.org/wp-content/uploads/2016/11/Prepaid-Card.png" alt="Warehouse Icon" />
+        <p> Payments</p>
+      </button>
+    </div>
+    <div class="button-item">
+      <button routerLink="/homepage" class="action-btn">
+        <img
+          src="https://banner2.cleanpng.com/20180810/kcj/kisspng-stock-market-investment-share-iprovn-health-hack-cheats-amp-hints-cheat-hac-5b6d68a5f17c66.9736943215338968699891.jpg"
+          alt="Warehouse Icon" />
+        <p>Performance</p>
+      </button>
+    </div>
+  </div>
+</div>

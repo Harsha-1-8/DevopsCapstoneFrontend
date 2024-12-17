@@ -1,0 +1,243 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #edf2e1;
+}
+
+.container {
+  /* max-width: 900px;
+  margin: 20px auto; */
+  background-color: #f5f9eb;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative; /* Enables absolute positioning for child elements */
+  height: 100vh;
+}
+
+/* Header Styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.header-text{
+  color:black;
+  font-size: 25px;
+  font-weight: 900;
+  font-family: "";
+}
+
+.header h1 {
+  color: #4a2da4;
+  font-size: 24px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 14px;
+}
+
+.profile-icon {
+  width: 20px;
+  height: 20px;
+}
+.icon-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+/* Title Section */
+.title-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title-section h2 {
+  color: #4a2da4;
+  font-size: 20px;
+  margin: 0;
+}
+
+.title-section .add-item-btn {
+  background-color: #ffffff;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+}
+
+
+.title-section .add-item-btn:hover {
+  background-color: #c3d895;
+}
+
+.title-section p {
+  font-size: 14px;
+  color: #5a5a5a;
+  margin-top: 10px;
+}
+
+/* Form Styling */
+.form {
+  margin-top: 20px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  gap: 15px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  
+
+}
+
+.form-group.full-width {
+  flex: 0 0 50%;
+}
+
+label {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+input,
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+/* Generate BOM Button */
+.generate-btn {
+  background-color: #2d89ef;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.generate-btn:hover {
+  background-color: #1e70d1;
+}
+.notes-and-generate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.notes-and-generate .form-group {
+  width: 100%; /* Full width for input fields */
+  max-width: 400px; /* Optional: Limit the width for better alignment */
+}
+
+.notes-and-generate .generate-btn {
+  margin-top: 15px; /* Space between Notes and Generate button */
+  width: auto; /* Let the button take its natural size */
+}
+
+.form-group {
+display: flex;
+align-items: center; /* Align label and input vertically */
+gap: 10px; /* Space between label and input */
+}
+
+label {
+font-weight: bold;
+font-size: 14px;
+white-space: nowrap; /* Prevent label text from wrapping */
+flex: 0 0 150px; /* Set a fixed width for labels (adjust as needed) */
+}
+
+input,
+select {
+flex: 1; /* Input fields take up the remaining space */
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 14px;
+}
+
+input::placeholder {
+color: #aaa;
+}
+
+
+
+/* Container for the button and success message */
+.generate-bom-container {
+  display: flex; /* Horizontal layout */
+  align-items: center; /* Vertically align the button and message */
+  gap: 15px; /* Space between the button and message */
+  margin-top: 20px; /* Add some space above the row */
+}
+
+/* Button styling */
+.generate-btn {
+  background-color: #007bff; /* Blue button */
+  color: white; /* White text */
+  border: none;
+  padding: 10px 20px; /* Padding for a proper button size */
+  font-size: 14px; /* Font size */
+  font-weight: bold; /* Bold text */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.generate-btn:disabled {
+  background-color: #d6d6d6; /* Gray background for disabled button */
+  cursor: not-allowed; /* Show not-allowed cursor when disabled */
+}
+
+.generate-btn:hover:not(:disabled) {
+  background-color: #0056b3; /* Darker blue when hovered */
+}
+
+/* Success message styling */
+.success-notification {
+  border: 1px solid #36c7c9; /* Teal border */
+  background-color: #f9fff9; /* Very light green background */
+  padding: 3px 5px; /* Compact padding */
+  margin-top: 10px;
+  border-radius: 5px; /* Rounded corners */
+  color: #36c7c9; /* Teal text */
+  font-size: 11px; /* Font size */
+  font-weight: bold; /* Bold text for emphasis */
+  text-align: center; /* Center-align the message */
+}
+form small{
+  color: red;
+}
+
+.red-star{
+  color:red;
+}

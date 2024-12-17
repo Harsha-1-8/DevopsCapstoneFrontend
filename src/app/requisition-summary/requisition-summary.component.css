@@ -1,0 +1,348 @@
+html, body {
+  height: 100%; /* Ensures the body stretches to the viewport height */
+  min-height: 100%; /* Prevents the background from being cut off if content is short */
+  margin: 0; /* Removes default browser margin */
+  padding: 0; /* Removes default browser padding */
+  font-family: Arial, sans-serif;
+  background-color: #eef2e6; /* Existing background color */
+}
+
+  
+  /* Main Container */
+  .inventory-requisition-container {
+    max-width: 10000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f7fbe8;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header */
+  .inventory-header {
+    text-align: left;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .inventory-header h1 {
+    color: #6a329f;
+    font-style: italic;
+    font-size: 2rem;
+  }
+  
+  .inventory-header h2 {
+    font-size: 1.5rem;
+    color: black;
+    font-style: italic;
+  }
+  
+  .inventory-header p {
+    font-size: 1.5rem;
+    color: darkblue;
+    font-style: italic;
+  }
+  
+  /* Form Layout */
+  .inventory-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2rem;
+  }
+  
+  /* Form Row */
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  
+  /* Form Group */
+  .form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+  }
+  
+  .form-group label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #6a329f;
+    box-shadow: 0 0 4px rgba(106, 50, 159, 0.5); /* Light purple focus effect */
+  }
+  
+  /* Footer */
+  .form-footer {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .save-button {
+    background-color: #004aad;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .save-button:hover {
+    background-color: #003380;
+  }
+  
+  img {
+    max-width: 50px;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .flex-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  #stock {
+    margin-right: 40%;
+  }
+  
+  #notify {
+    margin-right: 15%;
+  }
+  
+  #inventory {
+    margin-right: 35%;
+    font-style: italic;
+  }
+  
+  #add-items-btn {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: solid;
+    color: rgb(54, 54, 200);
+    border-radius: 5px;
+    background-color: white;
+  }
+  
+  #add-items-btn .logo {
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .save-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .submit-button {
+    background-color: darkblue;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .table-container {
+    padding: 20px;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+  }
+  
+  .table th,
+  .table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .message-container {
+    display: flex;
+    /* Using flexbox for layout */
+    flex-direction: column; /* Stack the boxes vertically */
+    justify-content: center; /* Centers the boxes horizontally */
+    align-items: center; /* Centers the boxes vertically */
+    gap: 20px; /* Adds space between the two boxes */
+    height: 100vh; /* Takes full height of the viewport */
+  }
+  
+  .box {
+    text-align: center; /* Centers text inside each box */
+    padding: 20px; /* Adds padding inside the box */
+    border: 5px solid blue; /* Adds a pink solid border */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    background-color: #fff; /* Optional: Adds a white background */
+  }
+  
+  .box1 {
+    text-align: center; /* Centers text inside each box */
+    padding: 20px; /* Adds padding inside the box */
+    border: 5px solid hotpink; /* Adds a light blue solid border */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+    background-color: #fff; /* Optional: Adds a white background */
+  }
+  
+  .heading {
+    margin: 0; /* Removes margin around the heading */
+    color: blue; /* Sets the text color to a pink shade */
+    font-size: 24px; /* Optional: Adjusts font size */
+  }
+  
+  .heading-blue {
+    color: hotpink; /* Sets the text color to blue for box1 */
+    font-size: 24px; /* Optional: Adjusts font size */
+  }
+  
+  /* Container for the Table and Buttons */
+  .container {
+    display: flex; /* Arrange the table and buttons side by side */
+    flex-direction: column; /* Stack the table and button container vertically */
+    gap: 20px; /* Adds space between the table and buttons */
+    align-items: flex-start; /* Aligns content to the left */
+  }
+  
+  /* Table Container */
+  .table-container {
+    flex: 1; /* Makes the table take up available space */
+    width: 100%; /* Ensures the table takes the full width */
+  }
+  
+  /* Button Container (Right Side at Bottom) */
+  .button-container {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    gap: 10px; /* Adds space between the buttons */
+    margin-top: 20px; /* Adds space between the table and the buttons */
+  }
+  
+  /* Buttons */
+  .btn {
+    padding: 10px 20px; /* Adds padding to the buttons */
+    border: none; /* Removes the default border */
+    border-radius: 5px; /* Rounded corners for buttons */
+    color: #fff; /* White text */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Button font size */
+  }
+  
+  .btn-approve {
+    background-color: green; /* Green for approve button */
+  }
+  
+  .btn-reject {
+    background-color: red; /* Red for reject button */
+  }
+  
+  .btn:hover {
+    opacity: 0.8; /* Slightly fade the button on hover */
+  }
+  
+  .submit-button-container {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  #submit-button {
+    background-color: purple;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  #submit-button:hover {
+    background-color: darkorchid;
+  }
+  
+  .message-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .success-message {
+    color: purple;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .inventory-number {
+    color: purple;
+    font-size: 24px;
+    font-weight: bold;
+    border: 2px solid purple;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+
+  .inventoryrequisition-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  .inventoryrequisition-table th,
+  .inventoryrequisition-table td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .inventoryrequisition-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .inventoryrequisition-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .inventoryrequisition-table tbody tr:hover {
+    background-color: #e6f7ff;
+  }
+  

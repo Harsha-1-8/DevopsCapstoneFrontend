@@ -1,0 +1,88 @@
+/* General container styling */
+.container {
+  font-family: Arial, sans-serif;
+  background-color: #eef0d8; /* Matches the light green background */
+  padding: 20px;
+  height: 100vh;
+}
+
+/* Header styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 28px;
+  color: #6a1b9a; /* Purple color for Stock Vault */
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-item {
+  font-size: 16px;
+  color: #000; /* Black text for notifications and profile */
+}
+
+.icon-profile {
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 5px;
+  color: #333; /* Dark gray for the icon */
+}
+
+/* Main content styling */
+.content {
+  text-align: left; /* Align content to the left */
+  padding-left: 20px; /* Add padding for alignment */
+}
+
+.subtitle {
+  font-size: 22px;
+  color: #000; /* Black text for Bill Of Materials */
+  margin-bottom: 10px;
+}
+
+.instruction {
+  font-size: 18px;
+  color: #1a237e; /* Dark blue for instructions */
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+/* Search box styling */
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #fff;
+  width: 300px; /* Fixed width */
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+  padding: 5px;
+}
+.profile-icon {
+  width: 20px;
+  height: 20px;
+}
+
+
+.search-icon {
+  font-size: 16px;
+  color: #333; /* Dark gray for the icon */
+  margin-left: 5px;
+}

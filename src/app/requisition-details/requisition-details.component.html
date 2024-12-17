@@ -1,0 +1,81 @@
+<div class="inventory-requisition-container">
+  
+    <header class="inventory-header">
+      <div class="flex-container">
+        <h1 id="stock">Stock Vault</h1>
+        <h2 id="notify">Notifications</h2>
+        <h2>Profile</h2>
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/005/544/718/original/profile-icon-design-free-vector.jpg"
+        />
+      </div>
+    </header>
+  
+    <div class="flex-container">
+      <img
+        src="https://th.bing.com/th?id=OIP.CwYBb1GRbbB2bHMufzOZYAHaH0&w=243&h=256&c=8&rs=1&qlt=90&o=6&dpr=1.3&pid=3.1&rm=2"
+        alt="Sample Image from Bing"
+      />
+      <h2 id="inventory">Inventory Requisition Number : {{ generatedNumber }} </h2>
+    </div>
+  
+    <div class="table-container">
+      <table class="inventoryrequisition-table">
+        <thead>
+          <tr>
+            <th>Sl.No</th>
+            <th>Requisitioner Department</th>
+            <th>Unique Item Code</th>
+            <th>Quantity</th>
+            <th>Purpose of Requisitions</th>
+            <th>Material Required Date</th>
+            <th>Date of Requisition</th>
+            <th>Item Description</th>
+            <th>Unit of Measure</th>
+            <th>Delivery Department</th>
+            <th>Notes and Comments</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of inventoryRequisitions; index as i">
+            <td>{{ i + 1 }}</td>
+            <td>{{ item.requisitionerdepartment }}</td>
+            <td>{{ item.uniqueItemCode }}</td>
+            <td>{{ item.quantity }}</td>
+            <td>{{ item.purposeofrequistions }}</td>
+            <td>{{ item.materialrequireddate }}</td>
+            <td>{{ item.dateofrequistions }}</td> 
+            <td>{{ item.itemdescription }}</td>
+            <td>{{ item.unitsofmeasure }}</td>
+            <td>{{ item.deliverydepartment }}</td>
+            <td>{{ item.notesandcomments }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+      
+      <!-- Approve and Reject Buttons -->
+      <div class="button-container">
+        <div class="button-column">
+          <button class="btn btn-approve" (click)="setStatus('Approved')">Approve</button>
+          <button class="btn btn-reject" (click)="setStatus('Rejected')">Reject</button>
+        </div>
+      </div>
+      
+    
+    <!-- Submit Button -->
+    <div class="form-footer" *ngIf="status">
+      <p>Current Status: {{ status }}</p>
+      <button class="submit-button" (click)="onSubmit()">Submit</button>
+    </div>
+    
+    <!-- Popup for Submission -->
+  <div *ngIf="showPopup" class="popup">
+    <!-- This will trigger an alert when shown -->
+    <p>{{ status }}</p>
+    <button (click)="closePopup()">OK</button>
+  </div>
+  
+    
+  </div>

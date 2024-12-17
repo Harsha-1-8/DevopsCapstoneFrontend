@@ -1,0 +1,45 @@
+<div class="container">
+  <header class="header">
+    <h1 class="title">Stock Vault</h1>
+    <div class="nav">
+      <span class="nav-item">Notifications</span>
+      <span class="nav-item">Profile</span>
+      <img
+        src="https://static.vecteezy.com/system/resources/previews/005/544/718/original/profile-icon-design-free-vector.jpg"
+        alt="Profile Icon" class="profile-icon" />
+
+    </div>
+  </header>
+
+  <main class="content">
+    <h2 class="subtitle">Bill Of Materials</h2>
+    <p class="instruction">Enter the required details to create BOM</p>
+    <div class="search-box">
+      <img
+        src="https://thumbs.dreamstime.com/b/search-flat-icon-symbol-style-isolated-raster-image-white-background-232823489.jpg"
+        alt="Profile Icon" class="profile-icon" />
+
+      <input type="text" [(ngModel)]="searchInput" placeholder="Search for the item code" class="search-input"
+        (keydown.enter)="onEnter()" />
+
+      <!-- <button routerLink="/generate-bom">Search</button> -->
+      <button (click)="onEnter()">Search</button>
+    </div>
+
+    <!-- Display error message if item code is invalid -->
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+
+    <div class="result" *ngIf="itemDetails">
+      <h3>Item Details:</h3>
+      <p><strong>ID:</strong> {{ itemDetails.id }}</p>
+      <p><strong>Unique Item Code:</strong> {{ itemDetails.uniqueItemCode }}</p>
+      <p><strong>Description:</strong> {{ itemDetails.description }}</p>
+      <p><strong>Category:</strong> {{ itemDetails.category }}</p>
+      <p><strong>Dimensions:</strong> {{ itemDetails.dimensions }}</p>
+      <p><strong>Manufacturer:</strong> {{ itemDetails.manufacturer }}</p>
+      <p><strong>Country of Origin:</strong> {{ itemDetails.countryOfOrigin }}</p>
+    </div>
+  </main>
+</div>
